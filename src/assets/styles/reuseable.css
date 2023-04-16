@@ -1,0 +1,38 @@
+p, h1, span {
+    color: var(--text-primary-color);
+}
+  
+#app ::-webkit-scrollbar {
+overflow-x: hidden;
+    width: 10px;
+}
+
+#app ::-webkit-scrollbar-track {
+    background: var(--background-color-primary);
+}
+
+#app ::-webkit-scrollbar-thumb {
+    background:var(--accent-color)
+}
+
+.container-center {
+  background-color: var(--background-color-primary);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  padding: 2rem 1rem;
+  width: 90%;
+  text-align: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: var(--background-color-secondary);
+}
+
+.hide{
+  display: none;
+}

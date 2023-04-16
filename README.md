@@ -22,3 +22,16 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Icons used
+
+https://www.flaticon.com/free-icons/torch
+
+https://www.flaticon.com/free-icons/favourite
+
+https://www.flaticon.com/free-icons/tv
+
+https://www.flaticon.com/free-icons/star
+
+https://www.flaticon.com/free-icons/favorite

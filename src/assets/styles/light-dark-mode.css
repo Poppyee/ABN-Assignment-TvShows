@@ -1,0 +1,18 @@
+/* Define styles for light mode */
+:root {
+    --background-color-primary: #ebebeb;
+    --background-color-secondary: #fafafa;
+    --accent-color: #cacaca;
+    --text-primary-color: #222;
+    --element-size: 4rem;
+    --rgb-background: rgb(235, 235, 235, 0.7)
+  }
+  
+/* Define styles for dark mode */
+:root.dark-theme {
+--background-color-primary: #1e1e1e;
+--background-color-secondary: #2d2d30;
+--accent-color: #3f3f3f;
+--text-primary-color: #ddd;
+--rgb-background: rgb(30, 30, 30, 0.7)
+}
