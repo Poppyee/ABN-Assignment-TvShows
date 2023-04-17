@@ -36,3 +36,7 @@ overflow-x: hidden;
 .hide{
   display: none;
 }
+
+.invertColors{
+  filter: invert(var(--invert))
+}

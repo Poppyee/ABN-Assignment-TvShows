@@ -116,7 +116,7 @@
 .title {
   flex-direction: row;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .flex-column {

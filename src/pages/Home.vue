@@ -4,7 +4,7 @@
       id="myInput"
       v-model="inputValue" 
       type="text"
-      placeholder="Search Meals"
+      placeholder="Search Shows"
       title="Type in a meal"
       @keyup="search(inputValue)"
       @keydown="onFocusIn"
@@ -13,26 +13,26 @@
       id="cardContainer"
       class="card border-color"
     >
-      <h1>Todays Schedule</h1>
+      <h1>Today's Schedule</h1>
       <div style="flex-direction: row; overflow-x: scroll; display: flex; -webkit-overflow-scrolling: auto;">
         <div
-          v-for="movie in topMovies"
-          :key="movie.id"
+          v-for="result in todaysShows"
+          :key="result.id"
           class="tvCard"
         >
-          <router-link :to="'/chosenTVShow/'+ movie.show.id">
+          <router-link :to="'/chosenTVShow/'+ result.show.id">
             <p>
-              {{ movie.airtime }}         
+              {{ result.airtime }}         
             </p>
             <img
-              :src="movie.show.image.medium"
-              :alt="movie.name"
+              :src="result.show.image.medium"
+              :alt="result.name"
               width="200"
               height="300"
             >
             <p>
-              {{ movie.name }}
-              {{ movie.show.genre }}
+              {{ result.name }}
+              {{ result.show.genre }}
             </p>
           </router-link>
         </div>
@@ -46,15 +46,15 @@
     >
       <div style="flex-direction: row; overflow-x: scroll; display: flex; -webkit-overflow-scrolling: auto;">
         <div
-          v-for="movie in searchResults"
-          :key="movie.show.id"
+          v-for="result in searchResults"
+          :key="result.show.id"
           class="tvCard"
         >
-          <router-link :to="'/chosenTVShow/'+ movie.show.id">
-            <div v-if="movie.show.image">
+          <router-link :to="'/chosenTVShow/'+ result.show.id">
+            <div v-if="result.show.image">
               <img
-                :src="movie.show.image.medium"
-                :alt="movie.show.name"
+                :src="result.show.image.medium"
+                :alt="result.show.name"
                 width="200"
                 height="300"
               >
@@ -62,13 +62,13 @@
             <div v-else>
               <img
                 src="../assets/icons/missing.png"
-                :alt="movie.show.name"
+                :alt="result.show.name"
                 width="200"
                 height="300"
               >
             </div>
             <p>
-              {{ movie.show.name }}
+              {{ result.show.name }}
             </p>
           </router-link>
         </div>
@@ -81,7 +81,7 @@
   import axios from 'axios'
   import { onMounted, ref } from 'vue'
 
-  const topMovies =  ref([])
+  const todaysShows =  ref([])
   const inputValue = ''
   const searchResults = ref([])
   const showSearchResults = ref(false)
@@ -107,7 +107,7 @@
     axios
       .get('https://api.tvmaze.com/schedule?country=US')
       .then(response => {
-        topMovies.value = response.data
+        todaysShows.value = response.data
       })
       .catch(error => {
         console.log(error)
@@ -137,7 +137,6 @@
 
 .searchResults {
   padding: 2rem 1rem;
-  height: 40%;
   text-align: center;
   border: 1px solid rgb(155, 132, 2);
   border-radius: 4px;

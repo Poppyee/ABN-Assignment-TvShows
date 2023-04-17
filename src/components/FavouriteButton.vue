@@ -1,12 +1,13 @@
 <template>
   <div>
     <button
-      :class="{ 'hide': isFavourited}"
+      :class="{ 'hide': isFavourited }"
       @click="addToFavourites"
     >
       <img
+        class="invertColors"
         src="../assets/icons/unfavourited.png"
-        alt="Select light mode"
+        alt="Favourite"
         width="30"
         height="30"
       >
@@ -17,7 +18,7 @@
     >
       <img
         src="../assets/icons/favourited.png"
-        alt="Select dark mode"
+        alt="Unfavourite"
         width="30"
         height="30"
       >

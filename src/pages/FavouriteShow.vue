@@ -7,20 +7,20 @@
         class="alignment"
       >
         <div
-          v-for="movie in chosenShow"
-          :key="movie.id"
+          v-for="result in chosenShow"
+          :key="result.id"
           class="tvCard"
         >
-          <favourite-button :id="movie.id" />
-          <router-link :to="'/chosenTVShow/'+ movie.id">
+          <favourite-button :id="result.id" />
+          <router-link :to="'/chosenTVShow/'+ result.id">
             <img
-              :src="movie.image"
-              :alt="movie.name"
+              :src="result.image"
+              :alt="result.name"
               width="200"
               height="300"
             >
             <p>
-              {{ movie.name }}
+              {{ result.name }}
             </p>
           </router-link>
         </div>
