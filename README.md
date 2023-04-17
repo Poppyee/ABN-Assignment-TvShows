@@ -2,14 +2,14 @@
 
 Hi there. My name is Poppy Elisha-Elliss and this is my assignment for the position: Medior Front-End Developer. 
 
-I had a lot of fun making this assignment. Could it be better? Yes of course. But I wanted to finish it in a reasonable amount of time, and I believe it gives you a good impression of my capabilities.
+I had a lot of fun making this assignment. Could it be better? Yes of course. But I wanted to finish it in a reasonable amount of time.
 
 I hope you enjoy clicking through. Let me know if you have any questions.
 
 
 ## To run the application
 
-Ensure you are in the folder 'TvShows'. Open terminal and run:
+Open terminal and run:
 ```
 npm install
 ```
